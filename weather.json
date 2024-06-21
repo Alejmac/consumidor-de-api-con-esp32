@@ -1,24 +1,26 @@
 {
   "timezone": -21600,
+  "rain": {
+    "1h": 0.9599999
+  },
   "cod": 200,
-  "dt": 1718815143,
+  "dt": 1718925005,
   "base": "stations",
   "weather": [
     {
-      "id": 804,
-      "icon": "04d",
-      "main": "Clouds",
-      "description": "overcast clouds"
+      "id": 500,
+      "icon": "10d",
+      "main": "Rain",
+      "description": "light rain"
     }
   ],
   "sys": {
     "country": "MX",
-    "sunrise": 1718799209,
-    "sunset": 1718847396,
+    "sunrise": 1718885620,
+    "sunset": 1718933809,
     "id": 7128,
     "type": 1
   },
-  "name": "Zapopan",
   "clouds": {
     "all": 100
   },
@@ -26,18 +28,19 @@
     "lon": -103.3918,
     "lat": 20.6668
   },
-  "visibility": 9656,
+  "name": "Zapopan",
+  "visibility": 10000,
   "wind": {
-    "speed": 2.57,
-    "deg": 350
+    "speed": 0,
+    "deg": 0
   },
-  "id": 3979770,
   "main": {
-    "feels_like": 295.69,
-    "pressure": 1016,
-    "temp_min": 295.71,
+    "feels_like": 296.79,
+    "pressure": 1012,
+    "temp_min": 296.71,
     "humidity": 64,
-    "temp_max": 295.71,
-    "temp": 295.71
-  }
+    "temp_max": 296.71,
+    "temp": 296.71
+  },
+  "id": 3979770
 }

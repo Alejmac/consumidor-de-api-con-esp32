@@ -34,6 +34,11 @@
       <h2>Raw JSON Data</h2>
       <pre id="jsonDisplay"></pre>
     </div>
+    <div class="mt-4">
+      <h2>Control LED</h2>
+      <button id="ledOn" class="btn btn-success">Turn LED On</button>
+      <button id="ledOff" class="btn btn-danger">Turn LED Off</button>
+    </div>
   </div>
   <script>
     async function fetchWeatherData() {
@@ -166,7 +171,33 @@
       });
     }
 
-    document.addEventListener('DOMContentLoaded', fetchWeatherData);
+    async function controlLED(state) {
+      const response = await fetch('/api/led', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ state })
+      });
+
+      if (response.ok) {
+        console.log(`LED turned ${state}`);
+      } else {
+        console.error('Error controlling LED');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchWeatherData();
+      
+      document.getElementById('ledOn').addEventListener('click', () => {
+        controlLED('on');
+      });
+
+      document.getElementById('ledOff').addEventListener('click', () => {
+        controlLED('off');
+      });
+    });
   </script>
 </body>
 </html>
